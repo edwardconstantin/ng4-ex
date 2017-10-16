@@ -1,3 +1,31 @@
-<p>
-  home works!
-</p>
+<div class="container">
+
+  <!--<div class="jumbotron">
+    <h1 class="display-3">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>-->
+
+  <!--<div class="grid grid-pad">
+  <a *ngFor="let item of results"  [routerLink]="['/detail', item.id]"  class="col-1-4">
+    <a *ngFor="let item of results" href="{{item.html_url}}" class="col-1-4" target="_blank">
+      <div class="module hero">
+        <h4>{{item.name}}</h4>
+      </div>
+    </a>
+  </div>-->
+
+  <h1>{{account}}</h1>
+
+  <div class="row bottomline" *ngFor="let item of results">
+    <div class="col-md-8 col-sm-12">{{item.name}}</div>
+    <div class="col-4">
+      <a href="{{item.html_url}}">Link</a>
+    </div>
+  </div>
+
+</div>
