@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Subscription }   from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private http: HttpClient) {
+        http.get('assets/edwardconstantin.json').subscribe(data => {console.log(data) });
   }
+
+  ngOnInit() {}
 
 }

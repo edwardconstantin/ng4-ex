@@ -32,6 +32,7 @@ export class ApiService {
             data: data,
             searchTerm: searchStr
         };
+        //console.log(JSON.stringify(data));
         this.dataSource.next(this.gitData);
       });
     });

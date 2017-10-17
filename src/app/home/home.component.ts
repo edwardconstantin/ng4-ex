@@ -12,16 +12,11 @@ import { SearchService } from '../services/search/search.service';
 export class HomeComponent implements OnInit, OnDestroy {
 
   results: any;
-
   account = '';
   subscription: Subscription;
   searchSubscription: Subscription;
-  //search: SearchService;
 
   constructor(api: ApiService, search: SearchService) {
-
-    //this.search = search;
-    //this.searchSubscription = search.searchEv$.subscribe( searchStr => this.account = searchStr );
 
     if (api.gitData) {
       this.results = api.gitData.data;
@@ -35,14 +30,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.account = response.searchTerm;
     });
 
-
-
-
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
     // prevent memory leak when component destroyed
