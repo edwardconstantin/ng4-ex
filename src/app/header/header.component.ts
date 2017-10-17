@@ -14,18 +14,16 @@ export class HeaderComponent implements OnInit {
 
   title = 'my app';
 
-  constructor(private searchService: SearchService, private router: Router) {
+  constructor(private searchService: SearchService, private router: Router) {}
 
-  }
-
+  // Called by Git Search button
   gitSearch(term: HTMLInputElement) {
-    this.router.navigate(['/home']);
-    //this.$state.go('home');
     this.searchService.searchString(term.value);
-    //console.log( term.value );
+    this.router.navigate(['/home']);
   }
 
   ngOnInit() {
+    // Just to force close menu in mobile view
     $('.navbar-nav a, button.btn').on('click', function () {
         if (window.innerWidth <= 992) {
             $(".navbar-toggler").click();
