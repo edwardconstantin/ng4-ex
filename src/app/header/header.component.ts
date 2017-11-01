@@ -23,11 +23,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     // Just to force close menu in mobile view
-    $('.navbar-nav a, button.btn').on('click', function () {
+    /*$('.navbar-nav a, button.btn').on('click', function () {
         if (window.innerWidth <= 992) {
             $(".navbar-toggler").click();
         }
-    });
+    });*/
   }
 
 }

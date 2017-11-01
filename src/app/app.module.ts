@@ -11,6 +11,9 @@ import { AboutComponent } from './about/about.component';
 import { SearchService } from './services/search/search.service';
 import { ApiService } from './services/api.service';
 import { SpinnerComponent } from './other/spinner/spinner.component';
+import { CsvComponent } from './datatables/csv/csv.component';
+import { ApiComponent } from './datatables/api/api.component';
+import { HtmlComponent } from './datatables/html/html.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { SpinnerComponent } from './other/spinner/spinner.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CsvComponent,
+    ApiComponent,
+    HtmlComponent
   ],
   imports: [
     BrowserModule,

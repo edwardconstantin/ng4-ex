@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { CsvComponent } from './datatables/csv/csv.component';
+import { ApiComponent } from './datatables/api/api.component';
+import { HtmlComponent } from './datatables/html/html.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,9 +14,9 @@ const routes: Routes = [
   { path: 'data',
     //component: AboutComponent,
     children: [
-      {path: 'csv', component: AboutComponent},
-      {path: 'api', component: AboutComponent},
-      {path: 'html', component: AboutComponent}
+      {path: 'csv', component: CsvComponent},
+      {path: 'api', component: ApiComponent},
+      {path: 'html', component: HtmlComponent}
     ]
   }
 ];
