@@ -4,5 +4,9 @@
 
 .description {
   font-size: 14px;
-  color: gray;
+  color: darkslategray;
+}
+
+.card {
+  margin-top: 20px;
 }

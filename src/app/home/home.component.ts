@@ -15,8 +15,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   account = '';
   subscription: Subscription;
   searchSubscription: Subscription;
+  isLoading = false;
 
   constructor(api: ApiService, search: SearchService) {
+
+    this.searchSubscription = search.searchEv$.subscribe( searchStr => {
+      this.isLoading = true;
+    });
 
     if (api.gitData) {
       this.results = api.gitData.data;
@@ -28,6 +33,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subscription = api.dataEv$.subscribe( response => {
       this.results = response.data;
       this.account = response.searchTerm;
+      this.isLoading = false;
     });
 
   }

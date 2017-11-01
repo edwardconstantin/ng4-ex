@@ -22,11 +22,14 @@ export class ApiService {
     this.dataSource.next(search);
   }*/
 
+  isLoading = false;
+
   gitData: any;
 
   constructor(private http: HttpClient, private search: SearchService) {
 
     this.subscription = search.searchEv$.subscribe( searchStr => {
+      this.isLoading = true;
       this.getData(searchStr).subscribe( data => {
         this.gitData = {
             data: data,

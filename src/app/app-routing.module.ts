@@ -6,7 +6,16 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+
+  { path: 'data',
+    //component: AboutComponent,
+    children: [
+      {path: 'csv', component: AboutComponent},
+      {path: 'api', component: AboutComponent},
+      {path: 'html', component: AboutComponent}
+    ]
+  }
 ];
 
 @NgModule({

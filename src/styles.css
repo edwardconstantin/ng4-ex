@@ -3,6 +3,54 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.center{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.row {
+  min-height: 45px;
+}
+
+.bg-primary {
+    background-color: #056f9d!important;
+}
+
+.card .card-header {
+    background-color: #2e86bc;
+  color: white;
+}
+
+.card-block {
+    background-color: aliceblue;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f6fbff;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+.table thead th {
+    background-color: #056f9d;
+    color: white;
+}
+
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+    color: darkslategray;
+}
+
+.page-item.active .page-link {
+    background-color: #056f9d;
+    border-color: #056f9d;
+}
+
+.page-link {
+  color: #056f9d;
+}
+
 .content {
   padding: 10px;
 }

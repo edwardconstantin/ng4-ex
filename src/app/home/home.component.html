@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 
   <!--<div class="jumbotron">
     <h1 class="display-3">Hello, world!</h1>
@@ -19,24 +19,33 @@
     </a>
   </div>-->
 
-  <h1>{{account}}</h1>
+  <app-spinner *ngIf="isLoading"></app-spinner>
 
-  <div class="row bottomline" *ngFor="let item of results">
-    <div class="col-md-3 col-sm-12">
-      <svg aria-hidden="true" class="octicon" height="18" version="1.1" viewBox="0 0 12 14" width="12">
+  <div class="card">
+    <h3 class="card-header"><span class="fa fa-github"></span> {{account}}</h3>
+    <div class="card-block">
+
+      <div class="row bottomline" *ngFor="let item of results">
+        <div class="col-md-3 col-sm-12 center">
+          <svg aria-hidden="true" class="octicon" height="18" version="1.1" viewBox="0 0 12 14" width="12">
         <path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
       </svg>
-      <a href="{{item.html_url}}">{{item.name}}</a>
-    </div>
-    <div class="col-md-7 col-sm-12 description">
-      {{item.description}}
-    </div>
-    <div class="col-md-1 col-sm-12 description">
-      {{item.language}}
-    </div>
-    <div class="col-md-1 col-sm-12 description">
-      {{ item.updated_at | date:'medium' }}
+          <a href="{{item.html_url}}">{{item.name}}</a>
+        </div>
+        <div class="col-md-5 col-sm-12 description">
+          {{item.description}}
+        </div>
+        <div class="col-md-1 col-sm-12 description">
+          {{item.language}}
+        </div>
+        <div class="col-md-3 col-sm-12 description">
+          {{ item.updated_at | date:'medium' }}
+        </div>
+      </div>
+
     </div>
   </div>
+
+
 
 </div>
