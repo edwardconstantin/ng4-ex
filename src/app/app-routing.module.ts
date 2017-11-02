@@ -8,15 +8,16 @@ import { HtmlComponent } from './datatables/html/html.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home',  component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'home',  component: HomeComponent, data: { title: 'Home' } },
+  { path: 'about', component: AboutComponent, data: { title: 'About' } },
 
   { path: 'data',
     //component: AboutComponent,
+    data: { title: 'Datatables' },
     children: [
-      {path: 'csv', component: CsvComponent},
-      {path: 'api', component: ApiComponent},
-      {path: 'html', component: HtmlComponent}
+      {path: 'csv', component: CsvComponent, data: { title: 'Table From CSV' } },
+      {path: 'api', component: ApiComponent, data: { title: 'Table From API' } },
+      {path: 'html', component: HtmlComponent, data: { title: 'Table From HTML' } }
     ]
   }
 ];
@@ -25,4 +26,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule {
+  routes = routes;
+}

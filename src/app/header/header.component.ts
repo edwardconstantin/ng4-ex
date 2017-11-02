@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router }   from '@angular/router';
 import { SearchService } from '../services/search/search.service';
 
@@ -12,6 +12,8 @@ declare var $ :any;
 export class HeaderComponent implements OnInit {
 
   title = 'my app';
+
+   @Input() routes: any;
 
   constructor(private searchService: SearchService, private router: Router) {}
 

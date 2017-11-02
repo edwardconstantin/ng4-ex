@@ -7,14 +7,19 @@ body {
   background-color: #f1f1f1;
 }
 
+.navbar {
+    /*border-bottom: 3px solid #ff8405;*/
+}
+
 .card {
   /*color: gray;*/
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 .card .card-header {
     background-color: #2e86bc;
   color: white;
+  /*border-bottom: 3px solid #ff8405;*/
 }
 
 .card-block {
