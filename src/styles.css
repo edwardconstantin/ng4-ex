@@ -1,10 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Gotham-light';
+  font-weight: normal;
+  src: url("assets/fonts/gotham-light-webfont.eot");
+  src: url("assets/fonts/gotham-light-webfont.eot#iefix") format("embedded-opentype"),
+  url("assets/fonts/gotham-light-webfont.woff") format("woff"),
+  url("assets/fonts/gotham-light-webfont.ttf") format("truetype"),
+  url("assets/fonts/gotham-light-webfont.svg") format("svg");
+}
+@font-face {
+  font-family: 'Gotham-book';
+  font-weight: normal;
+  src: url("assets/fonts/gotham-book-webfont.eot");
+  src: url("assets/fonts/gotham-book-webfont.eot#iefix") format("embedded-opentype"),
+  url("assets/fonts/gotham-book-webfont.woff") format("woff"),
+  url("assets/fonts/gotham-book-webfont.ttf") format("truetype"),
+  url("assets/fonts/gotham-book-webfont.svg") format("svg");
+}
+@font-face {
+  font-family: 'Gotham-medium';
+  font-weight: normal;
+  src: url("assets/fonts/gotham-medium-webfont.eot");
+  src: url("assets/fonts/gotham-medium-webfont.eot#iefix") format("embedded-opentype"),
+  url("assets/fonts/gotham-medium-webfont.woff") format("woff"),
+  url("assets/fonts/gotham-medium-webfont.ttf") format("truetype"),
+  url("assets/fonts/gotham-medium-webfont.svg") format("svg");
+}
+@font-face {
+  font-family: 'Gotham-bold';
+  font-weight: 700;
+  src: url("assets/fonts/gotham-bold-webfont.eot");
+  src: url("assets/fonts/gotham-bold-webfont.eot#iefix") format("embedded-opentype"),
+  url("assets/fonts/gotham-bold-webfont.woff") format("woff"),
+  url("assets/fonts/gotham-bold-webfont.ttf") format("truetype"),
+  url("assets/fonts/gotham-bold-webfont.svg") format("svg");
+}
+
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotham-book', Helvetica, sans-serif;
 }
 
 body {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
+    /*background-image: url(assets/bg.jpg);
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 .navbar {
@@ -12,8 +55,8 @@ body {
 }
 
 .card {
-  /*color: gray;*/
-  /*margin-top: 20px;*/
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.5);
+  border-color: #96b0ca;
 }
 
 .card .card-header {
@@ -76,12 +119,12 @@ body {
 }
 
 .table thead th {
-    background-color: #056f9d;
+    background-color: #35a7d8;
     color: white;
 }
 
 .table tfoot th {
-    background-color: #056f9d;
+    background-color: #35a7d8;
     color: white;
 }
 
