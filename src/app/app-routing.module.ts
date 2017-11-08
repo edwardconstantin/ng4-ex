@@ -5,10 +5,12 @@ import { AboutComponent } from './about/about.component';
 import { CsvComponent } from './datatables/csv/csv.component';
 import { ApiComponent } from './datatables/api/api.component';
 import { HtmlComponent } from './datatables/html/html.component';
+import { ChartComponent } from './charts/chart/chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent, data: { title: 'Home' } },
+  { path: 'charts',  component: ChartComponent, data: { title: 'Charts' } },
   { path: 'about', component: AboutComponent, data: { title: 'About' } },
 
   { path: 'data',

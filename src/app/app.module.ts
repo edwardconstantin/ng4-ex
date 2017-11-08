@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import { ChartModule } from 'angular-highcharts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { SpinnerComponent } from './other/spinner/spinner.component';
 import { CsvComponent } from './datatables/csv/csv.component';
 import { ApiComponent } from './datatables/api/api.component';
 import { HtmlComponent } from './datatables/html/html.component';
+import { ChartComponent } from './charts/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { HtmlComponent } from './datatables/html/html.component';
     SpinnerComponent,
     CsvComponent,
     ApiComponent,
-    HtmlComponent
+    HtmlComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule
   ],
   providers: [ SearchService, ApiService],
   bootstrap: [AppComponent]
