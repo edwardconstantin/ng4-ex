@@ -16,6 +16,7 @@ import { CsvComponent } from './datatables/csv/csv.component';
 import { ApiComponent } from './datatables/api/api.component';
 import { HtmlComponent } from './datatables/html/html.component';
 import { ChartComponent } from './charts/chart/chart.component';
+import { MarketComponent } from './charts/market/market.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChartComponent } from './charts/chart/chart.component';
     CsvComponent,
     ApiComponent,
     HtmlComponent,
-    ChartComponent
+    ChartComponent,
+    MarketComponent
   ],
   imports: [
     BrowserModule,

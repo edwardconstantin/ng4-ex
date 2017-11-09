@@ -6,11 +6,20 @@ import { CsvComponent } from './datatables/csv/csv.component';
 import { ApiComponent } from './datatables/api/api.component';
 import { HtmlComponent } from './datatables/html/html.component';
 import { ChartComponent } from './charts/chart/chart.component';
+import { MarketComponent } from './charts/market/market.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent, data: { title: 'Home' } },
-  { path: 'charts',  component: ChartComponent, data: { title: 'Charts' } },
+  { path: 'charts',
+    //component: ChartComponent,
+    data: { title: 'Charts' },
+    children: [
+      {path: 'chart', component: ChartComponent, data: { title: 'HC Chart' } },
+      {path: 'market', component: MarketComponent, data: { title: 'Market Chart' } }
+    ]
+  },
+
   { path: 'about', component: AboutComponent, data: { title: 'About' } },
 
   { path: 'data',

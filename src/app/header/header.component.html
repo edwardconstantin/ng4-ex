@@ -15,9 +15,8 @@
         </li>
 
         <li class="nav-item dropdown" routerLinkActive="active">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Datatables
-        </a>
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Datatables</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" routerLink="/data/csv" routerLinkActive="active">Table From CSV</a>
             <a class="dropdown-item" routerLink="/data/api" routerLinkActive="active">Table From API</a>
@@ -25,8 +24,12 @@
           </div>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/charts" routerLinkActive="active">Charts</a>
+        <li class="nav-item dropdown" routerLinkActive="active">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charts</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/charts/chart" routerLinkActive="active">HC Chart</a>
+            <a class="dropdown-item" routerLink="/charts/market" routerLinkActive="active">Market Chart</a>
+          </div>
         </li>
 
         <li class="nav-item">
