@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,9 +26,11 @@
     "core-js": "^2.4.1",
     "datatables.net": "^1.10.16",
     "datatables.net-bs4": "^1.10.16",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "highcharts": "^6.0.2",
     "jquery-csv": "^0.8.3",
+    "nodemon": "^1.12.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
