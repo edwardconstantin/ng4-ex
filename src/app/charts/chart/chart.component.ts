@@ -1,12 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Chart } from 'angular-highcharts';
+//import { Observable } from 'rxjs/Observable';
+import { Sse } from '../../services/sse.service';
+//import * as EventSource from 'eventsource';
+
+declare var EventSource: any;
+//eventSource: any = window['EventSource'];
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.css']
 })
+
 export class ChartComponent {
+
   chart = new Chart({
       chart: {
         type: 'line'
@@ -99,5 +107,17 @@ export class ChartComponent {
   // add point to chart serie
   add() {
     this.chart.addPoint(Math.floor(Math.random() * 10));
+    this.obs.unsubscribe();
   }
+
+  obs: any;
+  constructor(sse: Sse) {
+    this.obs = sse.observe('/api/events/').subscribe(  x => this.chart.addPoint(parseInt(x)) );
+  }
+
+  ngOnDestroy () {
+    this.obs.unsubscribe();
+  }
+
+
 }

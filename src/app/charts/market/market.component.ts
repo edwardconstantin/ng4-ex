@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var TradingView :any;
+declare var window :any;
 
 @Component({
   selector: 'app-market',
@@ -33,17 +34,32 @@ export class MarketComponent implements OnInit {
       "show_popup_button": true,
       "popup_width": "1000",
       "popup_height": "650",
-        "studies": [
+        /*"studies": [
           "BB@tv-basicstudies",
           "CCI@tv-basicstudies"
+        ],*/
+    "drawings_access": {
+        "type": "black",
+        "tools": [
+            { "name": "Regression Trend" },
+            { "name": "Trend Angle", "grayed": true },
         ]
+    },
+    "studies_access": {
+        "type": "black",
+        "tools": [
+            { "name": "Aroon" },
+            { "name": "Balance of Power", "grayed": true },
+        ]
+    }
     });
 
+    window.chart = this.chart;
     this.symbol = this.chart.options.symbol;
 
 
-
-  console.log(this.chart);
+    //debugger;
+  //console.log(this.chart);
 
   }
 

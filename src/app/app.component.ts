@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
       })
       .subscribe(route => {
         this.routes = route.map(r => r.value);
-        console.log(this.routes);
+        //console.log(this.routes);
       });
   }
 

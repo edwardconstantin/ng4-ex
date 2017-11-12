@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SearchService } from './services/search/search.service';
 import { ApiService } from './services/api.service';
+import { Sse } from './services/sse.service';
 import { SpinnerComponent } from './other/spinner/spinner.component';
 import { CsvComponent } from './datatables/csv/csv.component';
 import { ApiComponent } from './datatables/api/api.component';
@@ -38,7 +39,7 @@ import { MarketComponent } from './charts/market/market.component';
     AppRoutingModule,
     ChartModule
   ],
-  providers: [ SearchService, ApiService],
+  providers: [ SearchService, ApiService, Sse],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

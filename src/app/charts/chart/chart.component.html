@@ -1,9 +1,12 @@
 <div class="container">
 
   <div class="card">
-    <h3 class="card-header"><span class="fa fa-bar-chart"></span> HC Charts
-      <button class="btn btn-outline-secondary my-2 my-sm-0 float-right" (click)="add()">Add Point!</button>
+    <div class="card-header">
+      <h3 class="float-left">
+        <span class="fa fa-bar-chart"></span> HC Charts
       </h3>
+      <button class="btn btn-outline-secondary my-sm-0 float-right" (click)="add()">Add Point!</button>
+    </div>
     <div class="card-block">
       <div [chart]="chart"></div>
       <div [chart]="chart2"></div>
