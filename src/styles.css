@@ -36,6 +36,27 @@
   url("assets/fonts/gotham-bold-webfont.svg") format("svg");
 }
 
+.container {
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggleable-md .navbar-nav .dropdown-menu {
+      position: static;
+      float: none;
+      border: 0;
+      margin: 0;
+      padding: 0;
+  }
+
+  .dropdown-item {
+    height: 36px;
+  }
+
+  .card-header:first-child {
+    border-radius: 0;
+  }
+}
 
 * {
     font-family: 'Gotham-book', Helvetica, sans-serif;

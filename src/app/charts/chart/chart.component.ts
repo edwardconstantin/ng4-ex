@@ -19,8 +19,19 @@ export class ChartComponent {
       chart: {
         type: 'line'
       },
+      xAxis: {
+        type: 'category',
+        title: {
+            text: null
+        },
+        /*min: 0,
+        max: 4,
+        scrollbar: {
+            enabled: true
+        }*/
+      },
       title: {
-        text: 'Linechart'
+        text: 'Linechart - SSE Data'
       },
       credits: {
         enabled: false
