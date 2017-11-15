@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChartComponent } from './chart.component';
+import { ChartModule } from 'angular-highcharts';
+import { Sse } from '../../services/sse.service';
 
 describe('ChartComponent', () => {
   let component: ChartComponent;
@@ -8,7 +9,9 @@ describe('ChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChartComponent ]
+      imports: [ ChartModule ],
+      declarations: [ ChartComponent ],
+      providers: [ Sse]
     })
     .compileComponents();
   }));

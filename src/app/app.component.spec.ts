@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchService } from './services/search/search.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,6 +16,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         FooterComponent
       ],
+      providers: [SearchService]
     }).compileComponents();
   }));
 

@@ -7,8 +7,8 @@ describe('ng4-playground App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display brand name', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Hello, world!');
+    expect(page.getParagraphText()).toEqual('Ng4Playground');
   });
 });

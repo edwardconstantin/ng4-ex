@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CsvComponent } from './csv.component';
-
+import {HttpClientModule} from '@angular/common/http';
 describe('CsvComponent', () => {
   let component: CsvComponent;
   let fixture: ComponentFixture<CsvComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ CsvComponent ]
     })
     .compileComponents();
