@@ -30,6 +30,10 @@ Run `ng test --browser PhantomJS`
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Other cool stuff:
+## Surge commands
 
 Run `surge -p dist/`
+
+Run `surge list` 
+
+Run `surge --domain https://acid-yarn.surge.sh` to force SSL
