@@ -16,12 +16,6 @@ export class ApiService {
   // Observable string streams
   dataEv$ = this.dataSource.asObservable();
 
-  // Service message commands
-/*  searchString(search: string) {
-    this.term = search;
-    this.dataSource.next(search);
-  }*/
-
   isLoading = false;
 
   gitData: any;
@@ -35,7 +29,6 @@ export class ApiService {
             data: data,
             searchTerm: searchStr
         };
-        //console.log(JSON.stringify(data));
         this.dataSource.next(this.gitData);
       });
     });

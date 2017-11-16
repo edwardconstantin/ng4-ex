@@ -24,6 +24,8 @@ Run `ng test -sm=false` // --sourcemaps=false
 
 Run `ng test --single-run --code-coverage`
 
+Run `ng test --browser PhantomJS`
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
