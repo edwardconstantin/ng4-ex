@@ -4,7 +4,9 @@ cache:
   paths:
     - node_modules/
 
-test_ng4playground:
+test_ng4-api:
   script:
     - npm install
-    - ./node_modules/@angular/cli/bin/ng test --single-run=true --browsers PhantomJS --watch=false
+    - ./node_modules/@angular/cli/bin/ng test --single-run=true --browsers PhantomJS --watch=false --no-progress
+    - ./node_modules/@angular/cli/bin/ng build --prod --no-progress
+    - ./node_modules/.bin/surge -p dist
