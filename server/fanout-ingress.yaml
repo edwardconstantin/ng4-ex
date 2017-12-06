@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fanout-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      #- path: /
+      #  backend:
+      #    serviceName: play-web
+      #    servicePort: 80
+      - path: /api/events
+        backend:
+          serviceName: server-master
+          servicePort: 3000
