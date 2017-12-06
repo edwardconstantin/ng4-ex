@@ -37,9 +37,9 @@
         </li>
 
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <form (submit)="gitSearch($event)" class="form-inline my-2 my-lg-0">
         <input #term class="form-control mr-sm-2" type="text" placeholder="Search" value="edwardconstantin">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="button" (click)="gitSearch(term)"><span class="fa fa-search"></span> Git</button>
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><span class="fa fa-search"></span> Git</button>
       </form>
     </div>
   </nav>

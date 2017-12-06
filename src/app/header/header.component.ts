@@ -17,9 +17,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(private searchService: SearchService, private router: Router) {}
 
-  // Called by Git Search button
-  gitSearch(term: HTMLInputElement) {
-    this.searchService.searchString(term.value);
+  // Called by Git Search button or pressing Enter to submit
+  gitSearch(ev) {
+    ev.preventDefault();
+    this.searchService.searchString(ev.target.elements[0].value);
     this.router.navigate(['/home']);
   }
 
